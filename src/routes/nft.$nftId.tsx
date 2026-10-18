@@ -1,4 +1,4 @@
-// PONTO 1: imports (novos: useNavigate, toast, useCartMutations)
+﻿// PONTO 1: imports (novos: useNavigate, toast, useCartMutations)
 import { useState } from 'react'
 import { createFileRoute, Link, useNavigate } from '@tanstack/react-router'
 import { useQuery } from '@tanstack/react-query'
@@ -89,7 +89,7 @@ function NftDetail() {
 
       <div className="mt-4 grid gap-8 md:grid-cols-2">
         {/* Galeria */}
-        <section aria-label="Galeria de imagens">
+        <section aria-label="Galeria de imagens" className="rounded-lg bg-card p-4">
           <img
             src={nft.images[imageIndex]}
             alt={`${nft.name}, imagem ${imageIndex + 1} de ${nft.images.length}`}
@@ -152,7 +152,7 @@ function NftDetail() {
             </div>
           </fieldset>
 
-          <p className="mt-6 text-2xl font-semibold">{formatEth(edition.price)}</p>
+          <p className="mt-6 text-2xl font-semibold text-primary">{formatEth(edition.price)}</p>
 
           <div className="mt-4 max-w-40">
             <Label htmlFor="qty">Quantidade</Label>
