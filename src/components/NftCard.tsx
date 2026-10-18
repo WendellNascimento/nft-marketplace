@@ -1,4 +1,4 @@
-import { Link } from '@tanstack/react-router'
+﻿import { Link } from '@tanstack/react-router'
 import { FavoriteButton } from '@/components/FavoriteButton'
 import { Badge } from '@/components/ui/badge'
 import { formatEth } from '@/lib/money'
@@ -10,7 +10,7 @@ export function NftCard({ nft }: { nft: Nft }) {
       <Link
         to="/nft/$nftId"
         params={{ nftId: nft.id }}
-        className="block rounded-lg focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+        className="block rounded-lg bg-card p-3 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
       >
         <img
           src={nft.images[0]}
@@ -20,7 +20,7 @@ export function NftCard({ nft }: { nft: Nft }) {
           className="aspect-square w-full rounded-lg"
         />
         <p className="mt-3 h-6 truncate font-semibold">{nft.name}</p>
-        <p className="mt-1 flex h-5 items-center gap-2 text-sm">
+        <p className="mt-1 flex h-5 items-center gap-2 text-sm font-bold text-primary">
           {formatEth(nft.price)}
           {nft.available === 0 && <Badge variant="secondary">Esgotado</Badge>}
         </p>
@@ -28,8 +28,9 @@ export function NftCard({ nft }: { nft: Nft }) {
       <FavoriteButton
         nftId={nft.id}
         nftName={nft.name}
-        className="absolute top-2 right-2"
+        className="absolute top-5 right-5"
       />
     </li>
   )
 }
+

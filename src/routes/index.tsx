@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+﻿import { createFileRoute } from '@tanstack/react-router'
 import { useQuery } from '@tanstack/react-query'
 import { z } from 'zod'
 import { nftsQuery, type NftListParams } from '@/api/nfts'
@@ -49,7 +49,7 @@ function HomePage() {
 
   return (
     <div className="mx-auto max-w-7xl p-4 md:p-8">
-      <h1 className="text-3xl font-bold">NFT Marketplace</h1>
+      <section aria-label="Apresentação" className="py-8 md:py-12"><p className="text-xs text-primary">Bem-vindo à Kurio</p><h1 className="mt-3 max-w-xl text-3xl font-bold md:text-4xl">SEJA DONO DO FUTURO DA ARTE DIGITAL</h1><p className="mt-4 max-w-md text-sm text-muted-foreground">Descubra NFTs selecionados de criadores emergentes e consagrados.</p><a href="#catalogo" className="mt-6 inline-block rounded-md bg-primary px-4 py-2 text-xs font-bold text-primary-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none">EXPLORAR</a></section>
 
       <section aria-label="Filtros" className="mt-6">
         <CatalogFilters
@@ -65,7 +65,7 @@ function HomePage() {
         />
       </section>
 
-      <section aria-label="Catálogo" aria-busy={isFetching} className="mt-8">
+      <section aria-label="Catálogo" aria-busy={isFetching} id="catalogo" className="mt-8">
         {isPending && <CatalogSkeleton />}
 
         {isError && (

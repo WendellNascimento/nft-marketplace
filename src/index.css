@@ -1,13 +1,13 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-@import "@fontsource-variable/geist";
+@import "@fontsource-variable/roboto-mono";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
     --font-heading: var(--font-sans);
-    --font-sans: 'Geist Variable', sans-serif;
+    --font-sans: 'Roboto Mono Variable', monospace;
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -152,3 +152,26 @@
     animation: none;
   }
 }
+/* Tema do Figma: fundo marrom escuro e destaque cobre (cores estimadas a partir do protÃ³tipo) */
+:root {
+  color-scheme: dark;
+  --background: #140b07;
+  --foreground: #f5ece4;
+  --card: #1f120c;
+  --card-foreground: #f5ece4;
+  --popover: #24150d;
+  --popover-foreground: #f5ece4;
+  --primary: #d98a4a;
+  --primary-foreground: #1a0e0a;
+  --secondary: #2c1a11;
+  --secondary-foreground: #f5ece4;
+  --muted: #2c1a11;
+  --muted-foreground: #bfa999;
+  --accent: #3a2418;
+  --accent-foreground: #f5ece4;
+  --destructive: #f2877a;
+  --border: #3d271a;
+  --input: #3d271a;
+  --ring: #d98a4a;
+}
+
