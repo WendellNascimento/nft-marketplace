@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+﻿import { useEffect } from 'react'
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { useQueryClient } from '@tanstack/react-query'
 import { getApiError } from '@/api/client'
@@ -86,7 +86,7 @@ function OrderPage() {
       )}
 
       {o.status !== 'refused' && (
-        <section aria-labelledby="receipt" className="mt-6 rounded-lg border p-4">
+        <section aria-labelledby="receipt" className="mt-6 rounded-lg border bg-card p-4">
           <h2 id="receipt" className="text-lg font-semibold">
             Recibo
           </h2>
@@ -113,7 +113,7 @@ function OrderPage() {
               <dt>Taxa de rede</dt>
               <dd>{formatEth(o.networkFee)}</dd>
             </div>
-            <div className="flex justify-between text-base font-semibold">
+            <div className="flex justify-between text-base font-semibold text-primary">
               <dt>Total</dt>
               <dd>{formatEth(o.total)}</dd>
             </div>
