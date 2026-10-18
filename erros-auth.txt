@@ -1,0 +1,82 @@
+﻿
+> nft-marketplace@0.0.0 test:e2e
+> playwright test e2e/auth.spec.ts --project=desktop --reporter=list
+
+
+Running 6 tests using 2 workers
+
+  Ô£ô  2 [desktop] ÔÇ║ e2e\auth.spec.ts:15:1 ÔÇ║ cadastro: e-mail repetido ├® recusado (3.3s)
+  Ô£ô  1 [desktop] ÔÇ║ e2e\auth.spec.ts:20:1 ÔÇ║ cadastro e login de um usu├írio novo (4.7s)
+  Ô£ô  4 [desktop] ÔÇ║ e2e\auth.spec.ts:38:1 ÔÇ║ rota protegida redireciona ao login e volta depois de entrar (2.8s)
+  Ô£ô  5 [desktop] ÔÇ║ e2e\auth.spec.ts:48:1 ÔÇ║ logout e troca de usu├írio n├úo herdam dados (5.0s)
+  Ô£ÿ  3 [desktop] ÔÇ║ e2e\auth.spec.ts:28:1 ÔÇ║ login com senha errada n├úo cria sess├úo (8.2s)
+  Ô£ÿ  6 [desktop] ÔÇ║ e2e\auth.spec.ts:59:1 ÔÇ║ sess├úo expirada durante a navega├º├úo leva ao login com aviso (2.4s)
+
+
+  1) [desktop] ÔÇ║ e2e\auth.spec.ts:28:1 ÔÇ║ login com senha errada n├úo cria sess├úo ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Este e-mail j├í est├í cadastrado.').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('Este e-mail j├í est├í cadastrado.').first() with timeout 5000ms
+      - waiting for getByText('Este e-mail j├í est├í cadastrado.').first()
+
+
+      33 |   await field.press('Enter')
+      34 |   await expect(page.getByText('E-mail ou senha inv├ílidos.').first()).toBeVisible()
+    > 35 |   await expect(page.getByText('Este e-mail j├í est├í cadastrado.').first()).toBeVisible()
+         |                                                                           ^
+      36 | })
+      37 |
+      38 | test('rota protegida redireciona ao login e volta depois de entrar', async ({ page }) => {
+        at C:\Users\55889\projetos\nft-marketplace\e2e\auth.spec.ts:35:75
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\auth-login-com-senha-errada-n├úo-cria-sess├úo-desktop\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\auth-login-com-senha-errada-n├úo-cria-sess├úo-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\auth-login-com-senha-errada-n├úo-cria-sess├úo-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\auth-login-com-senha-errada-n├úo-cria-sess├úo-desktop\trace.zip
+
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+  2) [desktop] ÔÇ║ e2e\auth.spec.ts:59:1 ÔÇ║ sess├úo expirada durante a navega├º├úo leva ao login com aviso 
+
+    Error: page.evaluate: ReferenceError: api is not defined
+        at eval (eval at evaluate (:370:30), <anonymous>:1:13)
+        at UtilityScript.evaluate (<anonymous>:372:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at eval (eval at evaluate (:370:30), <anonymous>:1:13)
+        at UtilityScript.evaluate (<anonymous>:372:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Object.expireSession (C:\Users\55889\projetos\nft-marketplace\e2e\helpers.ts:37:39)
+        at C:\Users\55889\projetos\nft-marketplace\e2e\auth.spec.ts:62:14
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\auth-sess├úo-expirada-duran-67526-├º├úo-leva-ao-login-com-aviso-desktop\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\auth-sess├úo-expirada-duran-67526-├º├úo-leva-ao-login-com-aviso-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\auth-sess├úo-expirada-duran-67526-├º├úo-leva-ao-login-com-aviso-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\auth-sess├úo-expirada-duran-67526-├º├úo-leva-ao-login-com-aviso-desktop\trace.zip
+
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+  2 failed
+    [desktop] ÔÇ║ e2e\auth.spec.ts:28:1 ÔÇ║ login com senha errada n├úo cria sess├úo ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    [desktop] ÔÇ║ e2e\auth.spec.ts:59:1 ÔÇ║ sess├úo expirada durante a navega├º├úo leva ao login com aviso 
+  4 passed (56.9s)

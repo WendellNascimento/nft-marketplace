@@ -1,0 +1,1 @@
+export const COLLECTIONS = ['Neon Apes', 'Pixel Lands', 'Aether', 'Cyber Koi']

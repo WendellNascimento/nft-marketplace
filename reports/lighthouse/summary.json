@@ -1,0 +1,53 @@
+{
+  "runsPerPage": 3,
+  "targets": {
+    "performance": 90,
+    "accessibility": 95,
+    "bestPractices": 95,
+    "seo": 90
+  },
+  "env": {
+    "lighthouse": "13.5.0",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "formFactor": "desktop",
+    "throttling": "simulate"
+  },
+  "summary": {
+    "mobile/inicio": {
+      "performance": 60,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 92,
+      "lcp": 4497.60675,
+      "cls": 0.0002055905286566292,
+      "tbt": 703.5
+    },
+    "mobile/detalhe": {
+      "performance": 65,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 92,
+      "lcp": 4297.264499999999,
+      "cls": 0,
+      "tbt": 544.5
+    },
+    "desktop/inicio": {
+      "performance": 98,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 92,
+      "lcp": 937.8857,
+      "cls": 0.00003628025331710929,
+      "tbt": 41
+    },
+    "desktop/detalhe": {
+      "performance": 98,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 92,
+      "lcp": 1043.0880500000003,
+      "cls": 0.000004609053497942387,
+      "tbt": 27
+    }
+  }
+}
