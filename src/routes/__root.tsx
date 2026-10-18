@@ -1,7 +1,8 @@
-import { createRootRoute, Outlet } from '@tanstack/react-router'
+﻿import { createRootRoute, Outlet } from '@tanstack/react-router'
 import { useQuery } from '@tanstack/react-query'
 import { Toaster } from 'sonner'
 import { api } from '@/api/client'
+import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { useSession } from '@/lib/useSession'
 
@@ -33,6 +34,7 @@ function Root() {
       <main id="main">
         <Outlet />
       </main>
+      <Footer />
       <Toaster />
     </>
   )
