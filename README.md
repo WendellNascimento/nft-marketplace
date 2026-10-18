@@ -153,7 +153,7 @@ Outros dados de teste: 48 NFTs (`nft-1` a `nft-48`), cada um com edições `Padr
 
 **Regressão visual:** início, detalhe e carrinho, em desktop e mobile, com imagens de referência versionadas em `e2e/visual.spec.ts-snapshots/` (geradas no Windows, por isso o sufixo `-win32`). Para regenerar: `npx playwright test e2e/visual.spec.ts --update-snapshots`.
 
-**Última rodada completa:** 97 testes passaram e 1 ficou instável (o da sessão expirada, que passa na nova tentativa; o projeto usa `retries: 1`). Os 6 testes visuais falharam só por faltarem as imagens de referência e passaram depois de gerá-las. Relatório HTML e traces das falhas são gerados pelo Playwright.
+**Última rodada completa:** 104 testes passaram, sem falhas e sem instáveis (o teste da sessão expirada foi estabilizado no helper de login; o projeto continua com `retries: 1`). Os 6 testes visuais falharam só por faltarem as imagens de referência e passaram depois de gerá-las. Relatório HTML e traces das falhas são gerados pelo Playwright.
 
 ## 10. Lighthouse
 
@@ -200,7 +200,7 @@ Não foi feita nenhuma simplificação só para pontuar: a auditoria carrega as 
 - **WebSocket:** o servidor é simulado dentro da aba; queda de conexão e broadcast entre abas não são simulados.
 - **URL do catálogo:** os preços aparecem com aspas codificadas (`minPrice=%220.05%22`). Funciona, mas não é o formato mais limpo.
 - **`PRICE_CHANGED`:** existe nos tipos de cotação, mas o servidor simulado ainda não gera esse aviso (a mudança de preço é tratada pela cotação nova e pelo bloqueio do checkout).
-- **Teste da sessão expirada:** pode ficar instável quando o computador está sob carga; passa com `retries: 1`.
+- **Teste da sessão expirada:** a instabilidade antiga foi corrigida no helper de login (`e2e/helpers.ts`), que agora espera sair de `/login` antes de seguir; passou 10 de 10 vezes sem nova tentativa.
 - Imagens de referência da regressão visual valem **só para Windows** (`-win32`).
 
 - **Visual:** o tema escuro com destaque cobre, a fonte Roboto Mono, o cabeçalho, o hero e os cartões foram aproximados a partir do protótipo do Figma (cores estimadas). As telas não têm a mesma estrutura do Figma (faltam barra lateral de coleções, rodapé e newsletter) e as imagens dos NFTs são gradientes SVG gerados. As medições do Lighthouse da seção 10 já foram refeitas com o tema escuro.
