@@ -1,8 +1,14 @@
-﻿# NFT Marketplace
+# NFT Marketplace
 
 Marketplace de NFTs feito em **React + TypeScript** como desafio técnico. Toda a "API" é simulada com **MSW** (REST e Socket.IO), então o projeto roda sozinho, sem back-end. Nenhuma blockchain, carteira ou pagamento real é usado: tudo é simulado.
 
 **Stack:** React · TypeScript · Vite · TanStack Router · TanStack Query · Axios · Tailwind · shadcn/ui · MSW · Socket.IO (cliente real, servidor simulado pelo MSW) · Playwright · Lighthouse.
+
+**Site publicado:** https://nft-marketplace-n9t1.vercel.app
+
+**Repositório:** https://github.com/WendellNascimento/nft-marketplace
+
+**Login de teste:** ana@example.com / Senha@123
 
 ---
 
