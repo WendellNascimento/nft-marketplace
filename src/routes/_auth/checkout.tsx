@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+﻿import { useEffect, useRef, useState } from 'react'
 import { createFileRoute, Link, useNavigate } from '@tanstack/react-router'
 import { useQueryClient } from '@tanstack/react-query'
 import { isAxiosError } from 'axios'
@@ -194,7 +194,7 @@ function CheckoutPage() {
 
       <div className="mt-6 grid gap-6 md:grid-cols-[1fr_22rem]">
         <div className="grid gap-6">
-          <section aria-labelledby="sec-billing" className="grid gap-4 rounded-lg border p-4">
+          <section aria-labelledby="sec-billing" className="grid gap-4 rounded-lg border bg-card p-4">
             <h2 id="sec-billing" className="text-lg font-semibold">
               Dados do colecionador
             </h2>
@@ -217,7 +217,7 @@ function CheckoutPage() {
             />
           </section>
 
-          <section aria-labelledby="sec-wallet" className="grid gap-4 rounded-lg border p-4">
+          <section aria-labelledby="sec-wallet" className="grid gap-4 rounded-lg border bg-card p-4">
             <h2 id="sec-wallet" className="text-lg font-semibold">
               Carteira e rede
             </h2>
@@ -291,7 +291,7 @@ function CheckoutPage() {
           </section>
         </div>
 
-        <aside aria-labelledby="sec-summary" className="h-fit rounded-lg border p-4">
+        <aside aria-labelledby="sec-summary" className="h-fit rounded-lg border bg-card p-4">
           <h2 id="sec-summary" className="text-lg font-semibold">
             Resumo
           </h2>
@@ -322,7 +322,7 @@ function CheckoutPage() {
               <dt>Taxa de rede</dt>
               <dd>{formatEth(q.networkFee)}</dd>
             </div>
-            <div className="flex justify-between text-base font-semibold">
+            <div className="flex justify-between text-base font-semibold text-primary">
               <dt>Total</dt>
               <dd>{formatEth(q.total)}</dd>
             </div>
