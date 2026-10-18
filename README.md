@@ -1,4 +1,4 @@
-# NFT Marketplace
+﻿# NFT Marketplace
 
 Marketplace de NFTs feito em **React + TypeScript** como desafio técnico. Toda a "API" é simulada com **MSW** (REST e Socket.IO), então o projeto roda sozinho, sem back-end. Nenhuma blockchain, carteira ou pagamento real é usado: tudo é simulado.
 
@@ -155,16 +155,16 @@ Auditoria de **início (`/`) e detalhe (`/nft/nft-1`)**, perfis **mobile e deskt
 
 | Perfil / página | Performance | Accessibility | Best Practices | SEO | LCP | CLS | TBT |
 |---|---|---|---|---|---|---|---|
-| mobile/inicio | 60 ❌ | 100 ✅ | 100 ✅ | 92 ✅ | 4.50 s | 0.000 | 704 ms |
-| mobile/detalhe | 65 ❌ | 100 ✅ | 100 ✅ | 92 ✅ | 4.30 s | 0.000 | 545 ms |
-| desktop/inicio | 98 ✅ | 100 ✅ | 100 ✅ | 92 ✅ | 0.94 s | 0.000 | 41 ms |
-| desktop/detalhe | 98 ✅ | 100 ✅ | 100 ✅ | 92 ✅ | 1.04 s | 0.000 | 27 ms |
+| mobile/inicio | 70 ❌ | 100 ✅ | 100 ✅ | 92 ✅ | 4.02 s | 0.000 | 430 ms |
+| mobile/detalhe | 71 ❌ | 100 ✅ | 100 ✅ | 92 ✅ | 4.18 s | 0.000 | 361 ms |
+| desktop/inicio | 99 ✅ | 100 ✅ | 100 ✅ | 92 ✅ | 0.91 s | 0.000 | 25 ms |
+| desktop/detalhe | 99 ✅ | 100 ✅ | 100 ✅ | 92 ✅ | 0.97 s | 0.004 | 8 ms |
 
 Metas: Performance ≥ 90, Accessibility ≥ 95, Best Practices ≥ 95, SEO ≥ 90. Ambiente: Lighthouse com throttling padrão do perfil mobile (CPU 4× mais lenta e rede 4G simulada), Chromium do Playwright em Windows, sem outros processos pesados rodando.
 
-**Justificativa do resultado abaixo da meta (Performance no mobile):** o desktop passa com folga (98), o que indica que o problema é custo de execução de JavaScript sob CPU lenta, e não de rede ou de layout (CLS é 0). As causas prováveis, **ainda não isoladas por medição individual**, são:
+**Justificativa do resultado abaixo da meta (Performance no mobile):** o desktop passa com folga (99), o que indica que o problema é custo de execução de JavaScript sob CPU lenta, e não de rede ou de layout (CLS é 0). As causas prováveis, **ainda não isoladas por medição individual**, são:
 
-- **O MSW precisa iniciar antes da primeira renderização.** O app aguarda `startMocks()` (registro do worker e leitura do banco simulado) antes de renderizar. Isso empurra o LCP e aparece como TBT alto (545 a 704 ms) quando a CPU é 4× mais lenta.
+- **O MSW precisa iniciar antes da primeira renderização.** O app aguarda `startMocks()` (registro do worker e leitura do banco simulado) antes de renderizar. Isso empurra o LCP e aparece como TBT alto (361 a 430 ms) quando a CPU é 4× mais lenta.
 - **Peso do código dos mocks.** O pacote do MSW (`browser`, ~453 kB; ~168 kB com gzip) é o maior arquivo do build. Ele existe só para a demonstração: com uma API real, ele não seria enviado ao usuário.
 - **O Lighthouse limpa o armazenamento a cada medição**, então toda medição reinicia o banco simulado do zero.
 
@@ -197,4 +197,6 @@ Não foi feita nenhuma simplificação só para pontuar: a auditoria carrega as 
 - **Teste da sessão expirada:** pode ficar instável quando o computador está sob carga; passa com `retries: 1`.
 - Imagens de referência da regressão visual valem **só para Windows** (`-win32`).
 
-- **Visual:** o tema escuro com destaque cobre, a fonte Roboto Mono, o cabeçalho, o hero e os cartões foram aproximados a partir do protótipo do Figma (cores estimadas). As telas não têm a mesma estrutura do Figma (faltam barra lateral de coleções, rodapé e newsletter) e as imagens dos NFTs são gradientes SVG gerados. As medições do Lighthouse da seção 10 foram feitas antes dessa mudança visual.
+- **Visual:** o tema escuro com destaque cobre, a fonte Roboto Mono, o cabeçalho, o hero e os cartões foram aproximados a partir do protótipo do Figma (cores estimadas). As telas não têm a mesma estrutura do Figma (faltam barra lateral de coleções, rodapé e newsletter) e as imagens dos NFTs são gradientes SVG gerados. As medições do Lighthouse da seção 10 já foram refeitas com o tema escuro.
+
+

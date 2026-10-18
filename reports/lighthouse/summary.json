@@ -14,40 +14,40 @@
   },
   "summary": {
     "mobile/inicio": {
-      "performance": 60,
+      "performance": 70,
       "accessibility": 100,
       "bestPractices": 100,
       "seo": 92,
-      "lcp": 4497.60675,
-      "cls": 0.0002055905286566292,
-      "tbt": 703.5
+      "lcp": 4020.00905,
+      "cls": 0,
+      "tbt": 430
     },
     "mobile/detalhe": {
-      "performance": 65,
+      "performance": 71,
       "accessibility": 100,
       "bestPractices": 100,
       "seo": 92,
-      "lcp": 4297.264499999999,
+      "lcp": 4182.887699999999,
       "cls": 0,
-      "tbt": 544.5
+      "tbt": 361
     },
     "desktop/inicio": {
-      "performance": 98,
+      "performance": 99,
       "accessibility": 100,
       "bestPractices": 100,
       "seo": 92,
-      "lcp": 937.8857,
-      "cls": 0.00003628025331710929,
-      "tbt": 41
+      "lcp": 912.17875,
+      "cls": 0.00009386306800935838,
+      "tbt": 25
     },
     "desktop/detalhe": {
-      "performance": 98,
+      "performance": 99,
       "accessibility": 100,
       "bestPractices": 100,
       "seo": 92,
-      "lcp": 1043.0880500000003,
-      "cls": 0.000004609053497942387,
-      "tbt": 27
+      "lcp": 967.7007,
+      "cls": 0.004274231678486997,
+      "tbt": 8
     }
   }
 }
