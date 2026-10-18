@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { getApiError } from '@/api/client'
 import { useCartMutations, useQuote } from '@/api/cart'
@@ -97,7 +97,7 @@ function CartPage() {
               </ul>
             </section>
 
-            <aside aria-label="Resumo do pedido" className="h-fit rounded-lg border p-4">
+            <aside aria-label="Resumo do pedido" className="h-fit rounded-lg border bg-card p-4">
               <h2 className="text-lg font-semibold">Resumo</h2>
 
               {quote.couponCode ? (
@@ -133,7 +133,7 @@ function CartPage() {
                   <dt>Taxa de rede</dt>
                   <dd>{formatEth(quote.networkFee)}</dd>
                 </div>
-                <div className="flex justify-between border-t pt-2 text-base font-semibold">
+                <div className="flex justify-between border-t pt-2 text-base font-semibold text-primary">
                   <dt>Total</dt>
                   <dd>{formatEth(quote.total)}</dd>
                 </div>
@@ -190,7 +190,7 @@ function CartRow({ item, onQuantity, onRemove }: RowProps) {
   }
 
   return (
-    <li className="flex gap-4 rounded-lg border p-4">
+    <li className="flex gap-4 rounded-lg border bg-card p-4">
       <img
         src={item.image}
         alt={item.name}
@@ -231,7 +231,7 @@ function CartRow({ item, onQuantity, onRemove }: RowProps) {
           <Button variant="ghost" size="sm" onClick={onRemove} aria-label={`Remover ${item.name} do carrinho`}>
             Remover
           </Button>
-          <p className="ml-auto font-semibold">{formatEth(item.lineTotal)}</p>
+          <p className="ml-auto font-semibold text-primary">{formatEth(item.lineTotal)}</p>
         </div>
       </div>
     </li>
