@@ -1,4 +1,4 @@
-import { expect, type Page } from '@playwright/test'
+﻿import { expect, type Page } from '@playwright/test'
 
 export const PASSWORD = 'Senha@123'
 
@@ -22,6 +22,8 @@ export async function login(page: Page, email = 'ana@example.com', password = PA
   await field.press('Enter')
   await expect.poll(() => page.evaluate(() => localStorage.getItem('session'))).not.toBeNull()
   await expect(page.getByText('Olá,')).toBeVisible() // NOVO: espera a navegação do login terminar
+  // espera sair do /login (o Ola aparece antes da navegacao terminar)
+  await expect(page).not.toHaveURL(/\/login/)
 }
 
 export const sessionUser = (page: Page) =>
