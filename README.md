@@ -196,3 +196,5 @@ Não foi feita nenhuma simplificação só para pontuar: a auditoria carrega as 
 - **`PRICE_CHANGED`:** existe nos tipos de cotação, mas o servidor simulado ainda não gera esse aviso (a mudança de preço é tratada pela cotação nova e pelo bloqueio do checkout).
 - **Teste da sessão expirada:** pode ficar instável quando o computador está sob carga; passa com `retries: 1`.
 - Imagens de referência da regressão visual valem **só para Windows** (`-win32`).
+
+- **Visual:** o tema escuro com destaque cobre, a fonte Roboto Mono, o cabeçalho, o hero e os cartões foram aproximados a partir do protótipo do Figma (cores estimadas). As telas não têm a mesma estrutura do Figma (faltam barra lateral de coleções, rodapé e newsletter) e as imagens dos NFTs são gradientes SVG gerados. As medições do Lighthouse da seção 10 foram feitas antes dessa mudança visual.
