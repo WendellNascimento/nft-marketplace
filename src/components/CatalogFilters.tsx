@@ -48,7 +48,7 @@ export function CatalogFilters({ values, onChange, onClear }: Props) {
   }
 
   return (
-    <div className="grid gap-4 md:grid-cols-4">
+    <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
       <div>
         <Label htmlFor="search">Buscar</Label>
         <Input
@@ -109,12 +109,12 @@ export function CatalogFilters({ values, onChange, onClear }: Props) {
       </form>
 
       {priceError && (
-        <p role="alert" className="text-sm text-red-600 md:col-span-4">
+        <p role="alert" className="text-sm text-red-600 md:col-span-2 xl:col-span-4">
           {priceError}
         </p>
       )}
 
-      <div className="md:col-span-4">
+      <div className="md:col-span-2 xl:col-span-4">
         <Button variant="ghost" onClick={onClear}>
           Limpar filtros
         </Button>
