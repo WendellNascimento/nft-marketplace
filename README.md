@@ -151,9 +151,9 @@ Outros dados de teste: 48 NFTs (`nft-1` a `nft-48`), cada um com edições `Padr
 11. Acessibilidade: teclado, foco, erros associados, ausência de overflow horizontal.
 12. Skeletons em carregamento lento, falha e nova tentativa.
 
-**Regressão visual:** início, detalhe e carrinho, em desktop e mobile, com imagens de referência versionadas em `e2e/visual.spec.ts-snapshots/` (geradas no Windows, por isso o sufixo `-win32`). Para regenerar: `npx playwright test e2e/visual.spec.ts --update-snapshots`.
+**Regressão visual:** início, detalhe, carrinho e pagamento, em desktop e mobile, com imagens de referência versionadas em `e2e/visual.spec.ts-snapshots/` (geradas no Windows, por isso o sufixo `-win32`). Para regenerar: `npx playwright test e2e/visual.spec.ts --update-snapshots`.
 
-**Última rodada completa:** 104 testes passaram, sem falhas e sem instáveis (o teste da sessão expirada foi estabilizado no helper de login; o projeto continua com `retries: 1`). Os 6 testes visuais falharam só por faltarem as imagens de referência e passaram depois de gerá-las. Relatório HTML e traces das falhas são gerados pelo Playwright.
+**Última rodada completa:** 106 testes passaram, sem falhas e sem instáveis (o teste da sessão expirada foi estabilizado no helper de login; o projeto continua com `retries: 1`). Os 8 testes visuais (início, detalhe, carrinho e pagamento, em desktop e mobile) falharam só por faltarem as imagens de referência e passaram depois de gerá-las. Relatório HTML e traces das falhas são gerados pelo Playwright.
 
 ## 10. Lighthouse
 
@@ -194,8 +194,8 @@ Não foi feita nenhuma simplificação só para pontuar: a auditoria carrega as 
 ## 12. Limitações conhecidas
 
 - **Performance no mobile** abaixo da meta (seção 10).
-- **Fidelidade ao Figma:** conferência visual feita por inspeção manual; podem existir pequenas diferenças de espaçamento, tipografia (Geist em vez da fonte do Figma) e imagens (SVGs gerados).
-- **Regressão visual:** cobre início, detalhe e carrinho. A tela de **pagamento** ainda não tem imagem de referência.
+- **Fidelidade ao Figma:** conferência visual feita por inspeção manual; podem existir pequenas diferenças de espaçamento, tipografia (Roboto Mono, que é aproximação da fonte do Figma) e imagens (SVGs gerados).
+- **Regressão visual:** cobre início, detalhe, carrinho e pagamento, em desktop e mobile.
 - **Foco em diálogos:** o app não usa diálogos nem gavetas, então esse item não se aplica.
 - **WebSocket:** o servidor é simulado dentro da aba; queda de conexão e broadcast entre abas não são simulados.
 - **URL do catálogo:** os preços aparecem com aspas codificadas (`minPrice=%220.05%22`). Funciona, mas não é o formato mais limpo.
