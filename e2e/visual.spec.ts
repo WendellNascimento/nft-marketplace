@@ -1,5 +1,6 @@
 import { expect, test } from '@playwright/test'
 import { addToCart, settle } from './helpers'
+import { openCheckout } from './flows'
 
 test('visual: início', async ({ page }) => {
   await page.goto('/')
@@ -21,4 +22,10 @@ test('visual: carrinho', async ({ page }) => {
   await expect(page.getByRole('complementary', { name: 'Resumo do pedido' })).toBeVisible()
   await settle(page)
   await expect(page).toHaveScreenshot('carrinho.png', { fullPage: true })
+})
+
+test('visual: pagamento', async ({ page }) => {
+  await openCheckout(page)
+  await settle(page)
+  await expect(page).toHaveScreenshot('pagamento.png', { fullPage: true })
 })
