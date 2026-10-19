@@ -161,10 +161,10 @@ Auditoria de **início (`/`) e detalhe (`/nft/nft-1`)**, perfis **mobile e deskt
 
 | Perfil / página | Performance | Accessibility | Best Practices | SEO | LCP | CLS | TBT |
 |---|---|---|---|---|---|---|---|
-| mobile/inicio | 70 ❌ | 100 ✅ | 100 ✅ | 92 ✅ | 4.02 s | 0.000 | 430 ms |
-| mobile/detalhe | 71 ❌ | 100 ✅ | 100 ✅ | 92 ✅ | 4.18 s | 0.000 | 361 ms |
-| desktop/inicio | 99 ✅ | 100 ✅ | 100 ✅ | 92 ✅ | 0.91 s | 0.000 | 25 ms |
-| desktop/detalhe | 99 ✅ | 100 ✅ | 100 ✅ | 92 ✅ | 0.97 s | 0.004 | 8 ms |
+| mobile/inicio | 70 ❌ | 100 ✅ | 100 ✅ | 92 ✅ | 4.03 s | 0.000 | 432 ms |
+| mobile/detalhe | 71 ❌ | 100 ✅ | 100 ✅ | 92 ✅ | 4.15 s | 0.000 | 362 ms |
+| desktop/inicio | 99 ✅ | 100 ✅ | 100 ✅ | 92 ✅ | 0.90 s | 0.000 | 14 ms |
+| desktop/detalhe | 98 ✅ | 100 ✅ | 100 ✅ | 92 ✅ | 0.98 s | 0.004 | 12 ms |
 
 Metas: Performance ≥ 90, Accessibility ≥ 95, Best Practices ≥ 95, SEO ≥ 90. Ambiente: Lighthouse com throttling padrão do perfil mobile (CPU 4× mais lenta e rede 4G simulada), Chromium do Playwright em Windows, sem outros processos pesados rodando.
 

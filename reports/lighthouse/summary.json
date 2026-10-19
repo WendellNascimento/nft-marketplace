@@ -18,36 +18,36 @@
       "accessibility": 100,
       "bestPractices": 100,
       "seo": 92,
-      "lcp": 4020.00905,
+      "lcp": 4032.0454499999996,
       "cls": 0,
-      "tbt": 430
+      "tbt": 431.9999999999998
     },
     "mobile/detalhe": {
       "performance": 71,
       "accessibility": 100,
       "bestPractices": 100,
       "seo": 92,
-      "lcp": 4182.887699999999,
+      "lcp": 4153.171,
       "cls": 0,
-      "tbt": 361
+      "tbt": 362
     },
     "desktop/inicio": {
       "performance": 99,
       "accessibility": 100,
       "bestPractices": 100,
       "seo": 92,
-      "lcp": 912.17875,
+      "lcp": 899.6854999999998,
       "cls": 0.00009386306800935838,
-      "tbt": 25
+      "tbt": 13.5
     },
     "desktop/detalhe": {
-      "performance": 99,
+      "performance": 98,
       "accessibility": 100,
       "bestPractices": 100,
       "seo": 92,
-      "lcp": 967.7007,
+      "lcp": 981.0138999999999,
       "cls": 0.004274231678486997,
-      "tbt": 8
+      "tbt": 12
     }
   }
 }
