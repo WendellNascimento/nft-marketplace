@@ -1,4 +1,4 @@
-﻿import { Link, useNavigate } from '@tanstack/react-router'
+import { Link, useNavigate } from '@tanstack/react-router'
 import { useCart } from '@/api/cart'
 import { Button } from '@/components/ui/button'
 import { logout } from '@/lib/auth'
@@ -7,7 +7,7 @@ import { useSession } from '@/lib/useSession'
 
 // Estilo comum dos links do menu
 const linkClass =
-  'rounded-md px-2 py-1 text-sm underline-offset-4 hover:underline focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none'
+  'rounded-md whitespace-nowrap px-2 py-1 text-sm underline-offset-4 hover:underline focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none'
 
 // Link da página atual fica em cobre (como no Figma)
 const activeProps = { className: 'text-primary underline' }
@@ -63,7 +63,7 @@ export function Header() {
         <div className="flex items-center justify-end gap-3">
           {session ? (
             <>
-              <span className="text-sm">Olá, {session.user.name}</span>
+              <span className="text-sm whitespace-nowrap">Olá, {session.user.name}</span>
               <Button size="sm" onClick={onLogout}>
                 Sair
               </Button>
